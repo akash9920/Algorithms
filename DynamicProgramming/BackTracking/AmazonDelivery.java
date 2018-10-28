@@ -48,7 +48,9 @@ class AmazonDelivery {
 
         int[][] temp = new int[DeliveryMap.length][DeliveryMap[0].length];
         
-        if(deliveryUtil(DeliveryMap, temp, 0, 0)==false){
+        boolean ak = deliveryUtil(DeliveryMap, temp, 0, 0);
+
+        if(ak==false){
 
             printSolution(temp);
 
@@ -73,15 +75,19 @@ class AmazonDelivery {
 
 	public boolean deliveryUtil(int[][] DeliveryMap, int[][] temp, int x_row, int y_column) {
 
-        
-        if (DeliveryMap[x_row][y_column] == 9) {
+        if(x_row<DeliveryMap.length && y_column<DeliveryMap[0].length){
+            if (DeliveryMap[x_row][y_column] == 9 ) {
 
-            temp[x_row][y_column] = 9;
-            return true;
+                temp[x_row][y_column] = 9;
+                return true;
+            }
         }
+        
+     
 
 		if (isSafe(DeliveryMap, x_row, y_column)) {
 
+           
 
             temp[x_row][y_column] = 1;
             
@@ -90,6 +96,7 @@ class AmazonDelivery {
             printSolution(temp);
 
             System.out.println("================================");
+
 
 			if (deliveryUtil(DeliveryMap, temp, x_row + 1, y_column))
 				return true;
