@@ -11,13 +11,48 @@ class ArrayLengthSum{
     public static void main(String[] args){
 
         int[] arr = {1,2,3,4,5,5,6,7,8,9};
-        // if the array is not sorted then we will sort the array        
+               
 
        
         ArrayLengthSum S = new ArrayLengthSum();
 
-        System.out.println(S.subArraySumLength(arr, 100));
+       // System.out.println(S.binarySearch(arr, 9));
+        System.out.println(S.subArraySumLength(arr, 9));
 }
+
+
+
+
+
+public int binarySearch(int[] arr,int target){
+
+    int lo=0;
+    int hi=arr.length-1;
+   return binaryUtil(arr, lo, hi, target);
+
+}
+
+public int binaryUtil(int[] arr, int lo, int hi,int key){
+
+    int mid  = lo + (hi-lo)/2;
+
+
+    if(hi>=lo){
+
+        if(arr[mid] == key ){return mid;}
+        else if(arr[mid]>key){return binaryUtil(arr, lo, mid-1, key);}
+        else {return binaryUtil(arr, mid+1, hi, key);}
+    }   
+
+    return -1;
+
+
+
+}
+
+
+    
+
 
 
 
@@ -28,6 +63,13 @@ class ArrayLengthSum{
        int minLength=Integer.MAX_VALUE;
         int temp=0;
         int L = arr.length;
+        // Lil optimization
+        // BinarySearch for single element, though the process needs to be improved further
+
+     
+
+        if(arr[binarySearch(arr, target)]== target){ return 1;}
+
 
         for(int i=0;i<L-1;i++){
             int sum=arr[i];
@@ -53,5 +95,7 @@ class ArrayLengthSum{
         return 0;
 
     }
+
+
 
 }
