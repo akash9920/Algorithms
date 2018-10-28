@@ -21,12 +21,30 @@ class AmazonDelivery {
                           { 0, 0, 1, 1, 1, 1, 1, 1, 0 },
                           { 0, 0, 0, 0, 0, 0, 0, 1, 9 } 
                         };
+        int[][] map2 = {   { 1, 1, 0, 0, 0, 0, 0, 0, 0 }, 
+                          { 0, 1, 0, 0, 0, 0, 0, 0, 0 },
+                          { 0, 1, 1, 1, 0, 0, 0, 0, 0 },
+                          { 0, 0, 1, 1, 9, 0, 0, 0, 0 },
+                          { 0, 0, 1, 0, 0, 0, 0, 0, 0 },
+                          { 0, 0, 1, 1, 1, 1, 1, 1, 0 },
+                          { 0, 0, 0, 0, 0, 0, 0, 1, 0 } 
+                        };
+        int[][] map3 = {   { 1, 1, 0, 0, 0, 0, 0, 0, 0 }, 
+                        { 0, 1, 0, 0, 0, 0, 0, 0, 0 },
+                        { 0, 1, 1, 1, 0, 0, 0, 0, 0 },
+                        { 0, 0, 1, 1, 0, 0, 0, 0, 0 },
+                        { 0, 0, 1, 0, 0, 0, 0, 0, 0 },
+                        { 0, 0, 1, 1, 1, 1, 1, 1, 0 },
+                        { 0, 0, 0, 0, 0, 0, 0, 1, 0 } 
+                      };
+        // three maps are created to test the different conditions
+        
+                      
 
-                       
         AmazonDelivery Amazon = new AmazonDelivery();
         
-        Amazon.printSolution(map);
-		System.out.print(Amazon.findDelivery(map));
+        Amazon.printSolution(map3);
+		System.out.print(Amazon.findDelivery(map3));
 
     }
     
