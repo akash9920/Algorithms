@@ -3,7 +3,7 @@
 class MazePathFind {
 
 	/*
-	 * 2. Amazon Delivery problem - starting from origin Matrix - 2D Allowed road -
+	 * 2. Maze problem - starting from origin Matrix - 2D Allowed road -
 	 * 1 Not allowed road - 0 Destination - 9 Find any valid Path to reach the
 	 * destination; but you don't know where 9 is! You've to search that as well.
 	 * 
@@ -43,8 +43,8 @@ class MazePathFind {
 
         MazePathFind maze = new MazePathFind();
         
-        maze.printSolution(map3);
-		System.out.print(maze.findDelivery(map3));
+        maze.printSolution(map);
+		System.out.print(maze.findDelivery(map));
 
     }
     
