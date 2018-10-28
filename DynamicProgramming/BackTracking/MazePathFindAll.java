@@ -1,4 +1,4 @@
-class AmazonDeliveryAll{
+class MazePathFindAll{
 
         /*
     2. Amazon Delivery problem - starting from origin

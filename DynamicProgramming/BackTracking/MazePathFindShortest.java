@@ -1,7 +1,7 @@
-class AmazonDeliveryShortest {
+class MazePathFindShortest {
 
     /*
-    2. Amazon Delivery problem - starting from origin
+    2. Maze problem - starting from origin
 Matrix - 2D
 Allowed road - 1
 Not allowed road - 0

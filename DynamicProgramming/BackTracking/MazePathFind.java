@@ -1,6 +1,6 @@
 
 
-class AmazonDelivery {
+class MazePathFind {
 
 	/*
 	 * 2. Amazon Delivery problem - starting from origin Matrix - 2D Allowed road -
@@ -41,10 +41,10 @@ class AmazonDelivery {
         
                       
 
-        AmazonDelivery Amazon = new AmazonDelivery();
+        MazePathFind maze = new MazePathFind();
         
-        Amazon.printSolution(map3);
-		System.out.print(Amazon.findDelivery(map3));
+        maze.printSolution(map3);
+		System.out.print(maze.findDelivery(map3));
 
     }
     
