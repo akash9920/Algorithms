@@ -1,0 +1,9 @@
+
+A checklist for debugging:
+(1) for loops: are the starting value and the “while” condition valid? Could they be off by one?
+
+(2) while/until/do loops: is the “while/until” condition valid? Could it be off by one?
+(3) recursion: is the terminating condition arising at the correct point? Could it be off by one?
+(4) When comparing or assigning array values: are the indexes correct? Could one of them be off by one?
+(5) when using _compareTo_ or _less_: do you have the operands (_this_ and _other_) in the correct order?
+(6) [and last for now] incrementing variables: if you are using ++ or --, are you putting it on the correct side of the variable (i.e. pre- or post-)? Have you remembered to increment/decrement every variable that should be changed?
