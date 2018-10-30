@@ -181,6 +181,23 @@ Encapsulation is one of the four fundamental OOP concepts.
 
 
 
+<----------------- COllection Interface---------------------->
+
+The Collection interface is the foundation upon which the collections framework is built.
+it declares all the.
+
+--- >The List interface extends Collection and declares the behavior of a collection that stores a sequence of elements.
+
+Elements can be inserted or accessed by their position in the list, using a zero-based index.
+
+A list may contain duplicate elements.
+
+-------------Hash Map vs Hash Set-----------
+
+Hash set : single null value
+Hash Map : one null key and multiple null values
+
+
 
 
 
