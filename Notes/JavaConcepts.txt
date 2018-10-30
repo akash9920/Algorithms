@@ -1,0 +1,191 @@
+
+points to be noted:
+
+1) Java converts a a data on the right hand side according to the left hand side.
+
+2) Tenery operator: ex = Boolean wasCar =isCar ? true:false;
+
+Platform Independent
+
+robust: compile time error checking and runtime checking
+
+Names used for classes, variables, and methods are called identifiers
+
+All identifiers should begin with a letter (A to Z or a to z), 
+currency character ($) or an underscore (_).
+
+variables
+
+1) Local Variables
+2) Class Variables (Static Variables)
+3) Instance Variables (Non-static Variables).. the normal variables with keyword private public xyz
+
+modifiers
+
+a) Access Modifiers − default, public , protected, private
+
+b) Non-access Modifiers − final, abstract, strictfp
+
+ Enums restrict a variable to have one of only a few predefined values
+ 
+ Instance Variables − Each object has its unique set of instance variables.
+ An object's state is created by the values assigned to these 
+ instance variables.
+ 
+ Variables are nothing but reserved memory locations to store values
+ 
+ Reference variables are created using defined constructors of the classes. They are used to access objects.
+ 
+ -------------#very Deep----------------------
+ 
+ #Instance Variables
+ 
+1) Instance variables are declared in a class, but outside a method, constructor or any block.
+
+2) When a space is allocated for an object in the heap, a slot for each instance variable value is created.
+
+3) Instance variables are created when an object is created with the use of the keyword 'new' and destroyed when the object is destroyed.
+
+
+
+--------------------numberClass---------------------------
+boxing/ unboxing of wrapper class
+
+1	xxxValue()
+Converts the value of this Number object to the xxx data type and returns it.
+
+2	compareTo()
+Compares this Number object to the argument.
+
+3	equals()
+Determines whether this number object is equal to the argument.
+
+4	valueOf()
+Returns an Integer object holding the value of the specified primitive.
+
+5	toString()
+Returns a String object representing the value of a specified int or Integer.
+
+6	parseInt()
+This method is used to get the primitive data type of a certain String.
+
+
+
+--------------------INNER CLASSES---------------------------
+  inner class
+Inner classes are a security mechanism in Java
+
+		method inner class
+		
+we can write a class within a method and this will be a local type. 
+Like local variables, the scope of the inner class is restricted within the method.
+
+		Anonymous Inner class
+An inner class declared without a class name is known as an anonymous inner class.
+In case of anonymous inner classes, we declare and instantiate them at the same time. 
+Generally, they are used whenever you need to override the method of a class or an interface.
+
+--------------------OOPS----------------------------------------
+-----------------Inheritance-------------------------------
+
+1) A subclass inherits all the members (fields, methods, and nested classes) from its superclass.
+
+#SuperKeyword
+The super keyword is similar to this keyword. Following are the scenarios where the super keyword is used.
+
+It is used to differentiate the members of superclass from the members of subclass, if they have same names.
+
+It is used to invoke the superclass constructor from subclass.
+
+the implements keyword is used with classes to inherit the properties of an interface. Interfaces can never be extended by a class.
+
+
+IS-A realtionship {it can be acheived by using both implements and extends}
+Has-A relationship { creating a reference of class in another class to use its properties}
+
+----------------------------------overriding-----------------------------
+
+1)  overriding means to override the functionality of an existing method.
+
+2) If a class inherits a method from its superclass, then there is a chance to override the method provided that it is not marked final.
+
+rules
+
+a) The argument list should be exactly the same as that of the overridden method.
+b) The return type should be the same or a subtype of the return type declared in the original overridden method in the superclass.
+c) The access level cannot be more restrictive than the overridden method's access level. 
+For example: If the superclass method is declared public then the overridding method in the sub class cannot be either private or protected.
+d) A method declared static cannot be overridden but can be re-declared. ???  \m/ 
+https://docs.oracle.com/javase/tutorial/java/IandI/override.html 
+
+e) When invoking a superclass version of an overridden method the super keyword is used.
+
+---------------------polymorphism---------------------
+
+1) Any Java object that can pass more than one IS-A test is considered to be polymorphic
+
+#imp
+2) A reference variable can refer to any object of its declared type or any subtype of its declared type. 
+A reference variable can be declared as a class or interface type.
+
+virtual methods a bloody deep concept
+
+ref :  https://www.tutorialspoint.com/java/java_polymorphism.html
+
+CLass e;  { constructor = (a,b)} , {method m}
+CLass s extends e; { constructor = (a,b,c,d)} , {overriden method m}
+
+in main method {
+
+object s = (a,b,c,d);
+object e = (a,b,c,s);
+
+s.m();
+e.m()
+
+both the objects will call the overrden methods as per the constructor reference
+}
+
+-----------------abstraction-----------------------
+abstraction is a process of hiding the implementation details from the user, only the functionality will be provided to the user
+
+In Java, abstraction is achieved using Abstract classes and interfaces.
+
+rule
+
+1) if there is atleasst 1 asbtract method, then declare the class abstract
+2) Abstract classes may or may not contain abstract methods,
+3) cannot be instantiated
+4) if inherit abstract class, implement all methods
+
+If you want a class to contain a particular method but you want the actual implementation of that 
+method to be determined by child classes,
+you can declare the method in the parent class as an abstract.
+
+Declaring a method as abstract has two consequences −
+
+#####good point##### 
+The class containing it must be declared as abstract.
+
+Any class inheriting the current class must either override the abstract method or
+declare itself as abstract.
+
+child class objects can access the parents mathods and instance variables
+
+
+--------------------encapsulation--------------------------
+
+Encapsulation is one of the four fundamental OOP concepts.
+ The other three are inheritance, polymorphism, and abstraction.
+
+
+
+
+
+
+
+
+
+
+
+ 
