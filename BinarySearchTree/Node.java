@@ -13,4 +13,11 @@ class Node  {
     }
 
 
+
+    public void getNodeData(Comparable node){
+
+        return node.data;
+    }
+
+
 }
