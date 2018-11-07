@@ -18,6 +18,7 @@ class BinarySearchTree{
 
         if((getNodeData(root)).Compareto(data)<0){
 
+                root = root.left;
             
         }
 
