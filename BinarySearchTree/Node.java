@@ -1,8 +1,8 @@
 class Node  {
 
-    private Comparable data;
-    private Node left;
-    private Node right;
+     Comparable data;
+     Node left;
+     Node right;
 
 
     public Node(Comparable NodeValue){
