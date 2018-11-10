@@ -29,23 +29,7 @@ class BinarySearchTree{
 
 		BFS.add(root);
 
-		while (!BFS.isEmpty()) {
 
-			root = BFS.poll();
-
-			System.out.print(" " + root.key);
-
-			if (root.left != null) {
-
-				BFS.add(root.left);
-			}
-
-			if (root.right != null) {
-
-				BFS.add(root.right);
-			}
-
-		}
 	}
 
 
