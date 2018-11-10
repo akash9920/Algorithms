@@ -10,6 +10,12 @@ public class LowestCommonAncestor {
         Node left = findLowestCommonAncestor(root.left, x, y);
         Node right = findLowestCommonAncestor(root.right, x, y);
 
+        if(left != null && right != null ) {return root;}
+        if(left == null && right == null ) {return null;}
+
+        return left!=null? left:right;
+
+
     }
 
 
