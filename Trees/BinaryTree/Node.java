@@ -12,12 +12,4 @@ class Node  {
         this.right = null;
     }
 
-
-
-    public void getNodeData(Comparable node){
-
-        return node.data;
-    }
-
-
 }
