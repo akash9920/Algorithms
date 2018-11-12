@@ -1,8 +1,7 @@
 public class BST<Key extends Comparable<Key>, Value> {
 
     // its a generalization like <key,value>;
-    // ??
-
+    
     private Node root; // root of BST
 
     private class Node {
@@ -51,6 +50,20 @@ public class BST<Key extends Comparable<Key>, Value> {
             x.right = put(x.right, key, val);
         else if (cmp == 0)
             x.val = val;
+        return x;
+    }
+
+    public void deleteMin() {
+        root = deleteMin(root);
+    }
+
+    // unable to understand this one properly??
+
+    private Node deleteMin(Node x) {
+        if (x.left == null)
+            return x.right;
+        x.left = deleteMin(x.left);
+        x.count = 1 + size(x.left) + size(x.right);
         return x;
     }
 
