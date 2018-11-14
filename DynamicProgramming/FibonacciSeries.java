@@ -10,7 +10,7 @@ class FibonacciSeries {
             int n = 10;
 
            // FibonacciSeries f = new FibonacciSeries();
-            int i = fib(n);
+            int i = fib(20);
 
             System.out.println(" the value of the fib is " + i);
 

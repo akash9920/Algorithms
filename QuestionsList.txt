@@ -1,0 +1,24 @@
+1) Given a big array, how to efficiently find k’th largest element in it?
+
+Ans: Use min or max heap
+
+2) Given an array of size n with range of numbers from 1 to n+1. The array 
+   doesn’t contain any duplicate, one number is missing, find the missing number.
+
+3) How to write an efficient method to calculate x raise to the power n?
+
+4) Given an input string and a dictionary of words, find out if the input string can be segmented into a 
+space-separated sequence of dictionary words.
+ link : https://www.geeksforgeeks.org/word-break-problem-dp-32/
+ its a part of word break problem
+5) Given a row of n coins of values v1 . . . vn, where n is even.
+ We play a game against an opponent by alternating turns. In each turn,
+  a player selects either the first or last coin from the row, removes it
+ from the row permanently, and receives the value of the coin. Determine the
+ maximum possible amount of money we can definitely win if we move first.
+
+ link: https://www.geeksforgeeks.org/optimal-strategy-for-a-game-dp-31/
+ optimal strategy game problem
+
+6) link: https://www.geeksforgeeks.org/commonly-asked-algorithm-interview-questions-set-1/
+
