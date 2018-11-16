@@ -22,3 +22,16 @@ space-separated sequence of dictionary words.
 
 6) link: https://www.geeksforgeeks.org/commonly-asked-algorithm-interview-questions-set-1/
 
+
+
+
+
+
+
+
+
+
+-----------------Notes---------------------
+
+1) Do read about the general ecurity issues :Determine
+

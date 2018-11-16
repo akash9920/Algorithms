@@ -101,8 +101,6 @@ class MazePathFind {
             }
         }
         
-     
-
 		if (isSafe(DeliveryMap, x_row, y_column)) {
 
            

@@ -64,7 +64,8 @@ public int binaryUtil(int[] arr, int lo, int hi,int key){
         int temp=0;
         int L = arr.length;
         // Lil optimization
-        // BinarySearch for single element, though the process needs to be improved further
+        // BinarySearch for single element, 
+        // though the process needs to be improved further
 
      
 
