@@ -1,0 +1,44 @@
+1) Word Guess Game Design question. You need to a create a word guess game. each life will be reduced by one 
+on guessing a wrong character.
+
+Specifications:
+
+Time: 45 min
+number of lives: 5
+
+2) Fid whether there is a loop in a LinkedList or not.
+
+specificiation: 
+
+There can be duplicates in the linklist
+time: 20 minutes
+
+3) Find a number in a rotated array in a time complexity better then O(n)
+
+4) Write the code for Binary Search.
+
+5) design a post order iterator for a binary search tree.
+
+Specification:
+
+it should have has(),hasnext(),delete() functions.
+
+6) Find the shortest path between point a(x,y) and target(X,Y) whose values is 9 in a 2d array/ maze.
+
+Specification:
+can travel on path with values 1,
+cannot travel 0,
+target value : 9
+
+7) KnapSack problem:
+Note: I will update the complete question soon.
+
+8) find the longest palindrome in a string s.
+
+9) whether a given string is a plaindrome or not.
+
+
+
+
+
+
