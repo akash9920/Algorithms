@@ -1,7 +1,6 @@
-public class BreadthFirstPaths
-{
+public class BreadthFirstPaths{
     //In any connected graph G, BFS computes shortest paths
-//from s to all other vertices in time proportional to E + V
+    //from s to all other vertices in time proportional to E + V
 
 
  private boolean[] marked;
@@ -22,6 +21,7 @@ public class BreadthFirstPaths
  marked[w] = true;
  edgeTo[w] = v;
  distTo[w] = distTo[v] + 1;
+
  }
  }
  }
