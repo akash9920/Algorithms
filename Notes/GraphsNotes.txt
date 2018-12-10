@@ -1,0 +1,18 @@
+
+Undirected Graphs
+
+vertex---> joint / or point
+
+edge---> line 
+
+google it:
+1) euler cycle
+2) hamilton cycle
+3) planarity
+4) Graphs isomorphism
+
+in real world we do : 
+Algorithms based on iterating 
+over vertices adjacent to v. 
+
+

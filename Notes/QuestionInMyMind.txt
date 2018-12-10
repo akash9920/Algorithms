@@ -1,0 +1,28 @@
+1) when do we need to trace backwards to find a soltution
+
+need to underdstand this approach in detail
+
+
+2) IN rference to the binary search tree
+    // what will happen to the recusrion call if we dont store the value??
+    
+    public Node put(Node node,Key key, Value value){
+
+        if(root == null)return new Node(key,value);
+
+        int cmp  = key.CompareTo(node.key);
+
+        if(cmp>0) node.right = put(node.right,key,value);
+
+       else if(cmp<0) node.left = put(node.left,key,value);
+
+        else if (cmp==0) node.value = value;
+
+        return node;
+
+3) What can be used a return type and what can not be used as a return type?
+
+example Interface, Iterable<>, an exception?
+
+need to ge the the feelings in detail?
+

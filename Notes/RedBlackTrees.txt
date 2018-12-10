@@ -1,0 +1,34 @@
+Red Black trees
+
+Rules: 
+1) Every Node si a red or a black node.
+2) Root is always black
+3) New Insertions are always red
+4) Every path from root to leaf has the same number od black node
+5)No paths can have 2 consecutive RED nodes
+6)Nulls are black
+
+rebalance: Black aunt rotate,
+           Red aunt color flip
+    
+    Rule after rotation
+
+            Black
+            |   |
+            |   |   
+            RED  RED
+
+    
+    After color flip
+            RED
+            |   |
+            |   |   
+            BLK  BLK
+
+
+BUILDING THE trees
+
+ 
+
+
+

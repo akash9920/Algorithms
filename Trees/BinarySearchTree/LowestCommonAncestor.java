@@ -30,7 +30,7 @@ class LowestCommonAncestor {
         if(root.data.compareTo(left.data)>0 &&root.data.compareTo(right.data)<0 ) return root;
 
         if(root.left.data.compareTo(left.data)>0) {
-`
+
             return findLCA(root.left, left, right);
         }
         else if(root.right.data.compareTo(left.data)<0) {
