@@ -1,0 +1,12 @@
+3:18 pm udemy, 14th feb 2019.
+
+commads
+install maven
+
+1) Spring init --dependencies=web myapp
+
+
+
+NOtes
+POM -> project object model, it describes your project dependencies
+

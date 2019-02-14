@@ -26,3 +26,9 @@ example Interface, Iterable<>, an exception?
 
 need to ge the the feelings in detail?
 
+
+4) Why we cannot directly Instantiate Queue directly...
+
+ Queue<Integer> q = new Queue<Integer>();
+
+

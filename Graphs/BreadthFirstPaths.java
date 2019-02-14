@@ -1,4 +1,5 @@
 public class BreadthFirstPaths{
+    
     //In any connected graph G, BFS computes shortest paths
     //from s to all other vertices in time proportional to E + V
 
@@ -8,6 +9,7 @@ public class BreadthFirstPaths{
  private int[] distTo;
  
  private void bfs(Graph G, int s) {
+     
  Queue<Integer> q = new Queue<Integer>();
  // enqueue means adding items to the queue
  q.enqueue(s);

@@ -1,0 +1,215 @@
+Akash Anand: ----------->>> String hashcode <<<<<-------
+public final class String
+{
+ private int hash = 0;
+ private final char[] s;
+ ...
+ public int hashCode()
+ {
+ int h = hash;
+ if (h != 0) return h;
+ for (int i = 0; i < length(); i++)
+ h = s[i] + (31 * h);
+ hash = h;
+ return h;
+ }
+}
+
+--->>>
+
+Hash code design
+"Standard" recipe for user-defined types.
+・Combine each significant field using the 31x + y rule.
+・If field is a primitive type, use wrapper type hashCode().
+・If field is null, return 0.
+・If field is a reference type, use hashCode().
+・If field is an array, apply to each entry. 
+
+
+<<<<---
+
+something
+private int hash(Key key)
+ { return (key.hashCode() & 0x7fffffff)>>(32-k); }
+
+
+ <<<--
+
+ Uniform hashing assumption. Each key is equally likely to hash to an
+integer between 0 and M - 1.
+
+Birthday problem. Expect two balls in the same bin after ~ π M / 2
+tosses. 
+Coupon collector. Expect every bin has ≥ 1 ball after ~ M ln M tosses.
+
+
+----->>>  collision   <<<<<-----
+
+Collision. Two distinct keys hashing to same index.
+・Birthday problem ⇒ can't avoid collisions unless you have
+a ridiculous (quadratic) amount of memory.
+・Coupon collector + load balancing ⇒ collisions are evenly
+distributed.
+
+--->>> seperate chaining
+
+Use an array of M < N linked lists. [H. P. Luhn, IBM 1953]
+・Hash: map key to integer i between 0 and M - 1.
+・Insert: put at front of ith chain (if not already there).
+・Search: need to search only ith chain.
+
+
+public class SeparateChainingHashST<Key, Value>
+{
+ private int M = 97; // number of chains
+ private Node[] st = new Node[M]; // array of chains
+ private static class Node
+ {
+ private Object key;
+ private Object val;
+ private Node next;
+ ...
+ }
+ private int hash(Key key)
+ { return (key.hashCode() & 0x7fffffff) % M; }
+ public Value get(Key key) {
+ int i = hash(key);
+ for (Node x = st[i]; x != null; x = x.next)
+ if (key.equals(x.key)) return (Value) x.val;
+ return null;
+ } 
+}
+
+
+public void put(Key key, Value val) {
+ int i = hash(key);
+ for (Node x = st[i]; x != null; x = x.next)
+ if (key.equals(x.key)) { x.val = val; return; }
+ st[i] = new Node(key, val, st[i]);
+ } 
+
+ Proposition. Under uniform hashing assumption, prob. that the
+number of keys in a list is within a constant factor of N / M is extremely
+close to 1.
+
+Consequence. Number of probes for search/insert is proportional to
+N / M.
+
+M too large ⇒ too many empty chains.
+・M too small ⇒ chains too long.
+・Typical choice: M ~ N / 4 ⇒ constant-time ops.
+
+
+Goal. Average length of list N / M = constant.
+・Double size of array M when N / M ≥ 8.
+・Halve size of array M when N / M ≤ 2. 
+
+
+<<<<-----
+
+
+---->>> Linear Probing
+
+Open addressing. [Amdahl-Boehme-Rocherster-Samuel, IBM 1953]
+When a new key collides, find next empty slot, and put it there.
+
+Hash. Map key to integer i between 0 and M-1.
+Insert. Put at table index i if free; if not try i+1, i+2
+
+Note. Array size M must be greater than number of key-value pairs N.
+
+
+
+public class LinearProbingHashST<Key, Value>
+{
+ private int M = 30001;
+ private Value[] vals = (Value[]) new Object[M];
+ private Key[] keys = (Key[]) new Object[M];
+ private int hash(Key key) { /* as before */ }
+ private void put(Key key, Value val) { /* next slide */ }
+ public Value get(Key key)
+ {
+ for (int i = hash(key); keys[i] != null; i = (i+1) % M)
+ if (key.equals(keys[i]))
+ return vals[i];
+ return null;
+ }
+}
+
+
+public void put(Key key, Value val)
+ {
+ int i;
+ for (i = hash(key); keys[i] != null; i = (i+1) % M)
+ if (keys[i].equals(key))
+ break;
+ keys[i] = key;
+ vals[i] = val;
+ } 
+
+
+<<<<------
+
+
+----------->>> clustering
+
+Cluster. A contiguous block of items.
+Observation. New keys likely to hash into middle of big clusters.
+
+Half-full. With M / 2 cars, mean displacement is ~ 3 / 2.
+Full. With M cars, mean displacement is ~ π M / 8 .
+
+Parameters.
+・M too large ⇒ too many empty array entries.
+・M too small ⇒ search time blows up.
+・Typical choice: α = N / M ~ ½.
+
+Goal. Average length of list N / M ≤ ½.
+・Double size of array M when N / M ≥ ½.
+・Halve size of array M when N / M ≤ ⅛.
+・Need to rehash all keys when resizing.
+
+One-way hash function. "Hard" to find a key that will hash to a desired
+value (or two keys that hash to same value). 
+
+
+arate chaining vs. linear probing
+Separate chaining.
+・Performance degrades gracefully.
+・Clustering less sensitive to poorly-designed hash function.
+Linear probing.
+・Less wasted space.
+・Better cache performance
+
+
+<<<<<-------
+
+
+Hashing: variations on the theme
+Many improved versions have been studied.
+Two-probe hashing. [ separate-chaining variant ]
+・Hash to two positions, insert key in shorter of the two chains.
+・Reduces expected length of the longest chain to log log N.
+Double hashing. [ linear-probing variant ]
+・Use linear probing, but skip a variable amount, not just 1 each time.
+・Effectively eliminates clustering.
+・Can allow table to become nearly full.
+・More difficult to implement delete. 
+
+Cuckoo hashing. [ linear-probing variant ]
+・Hash key to two positions; insert key into either position; if
+occupied, reinsert displaced key into its alternative position (and
+recur).
+・Constant worst-case time for search.
+
+Hash tables vs. balanced search trees
+Hash tables.
+・Simpler to code.
+・No effective alternative for unordered keys.
+・Faster for simple keys (a few arithmetic ops versus log N compares).
+・Better system support in Java for strings (e.g., cached hash code).
+Balanced search trees.
+・Stronger performance guarantee.
+・Support for ordered ST operations.
+・Easier to implement compareTo() correctly than equals() and
+hashCode().
