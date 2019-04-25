@@ -13,33 +13,35 @@ public static void main(String[] args){
 
 StairCase S = new StairCase();
 
-System.out.print(" the number of ways is  : " + S.stairCase(20));
+System.out.print(" the number of ways is  : " + S.climbStairs(20));
 
 }
 
-HashMap<Integer,Integer> Hashmemory = new HashMap<>();
-
-public int stairCase(int n){
-
-    int memory = n;
-
-    return stairUtility(memory, n);
+HashMap<Integer,Integer> memory = new HashMap<>();
+    
+public int climbStairs(int n) {
+        
+    return utilityStairsClimb(n,memory);
+    
 }
 
 
-public int stairUtility(int memory,int totalsteps){
-
-if (memory<0) return 0;    
-if (memory==0) return 1;
-
-if(Hashmemory.containsKey(memory)) return Hashmemory.get(memory);
 
 
-Integer computeSteps = stairUtility( memory-1, totalsteps)+ stairUtility(memory-2,totalsteps);
-
-Hashmemory.put(memory, computeSteps);
-
-return computeSteps;
+public int utilityStairsClimb(int remain,HashMap<Integer,Integer> memory ){
+    
+    int val;
+    
+    if (remain==0) return 1;
+    if(remain<0) return 0;
+    if(memory.containsKey(remain)) return memory.get(remain);
+    
+    val =  utilityStairsClimb(remain-1,memory) + utilityStairsClimb(remain-2,memory);
+    memory.put(remain, val);
+    
+    return val;
+    
+    
 }
 
 }

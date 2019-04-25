@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MergeSortedArray",
+            "request": "launch",
+            "mainClass": "MergeSortedArray"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - GuessWord",
             "request": "launch",
             "cwd": "${workspaceFolder}",
