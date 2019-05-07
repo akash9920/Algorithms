@@ -1,0 +1,3 @@
+// for string pattern matching we can use KMP algorithm or subString as well, just look for that;
+
+example is StrStr question

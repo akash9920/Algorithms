@@ -1,0 +1,15 @@
+Notes:
+
+when we want to find the common node in a LinkedList problem, we  should compare the node (the ListNode) not the values
+as the values can be same. We can leverage only if the unique values are given.
+
+
+for DetectCycle Question, 
+
+    // we can use  ArrayList as well but that will slow down the run time. as per the run status
+        // on leetcode HashMap gives 5ms,ArrayList took 43ms
+
+
+Algo concepts used in question:
+
+1) Floyds Cycle ref : DetectCycle question
