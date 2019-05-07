@@ -38,6 +38,23 @@ class DetectCycle {
 
     public boolean hasCycle2(ListNode head) {
         
+        
+        if(head.next== null || head.next.next == null ) return false;
+        
+        ListNode x = head.next;
+        
+        ListNode x2 = head.next.next;
+            
+            while(x!= null && x2!=null){
+                
+                if(x==x2) return true;
+                
+                x= x.next;
+                x2 = x2.next.next;
+            }
+        
+        return false;
+        
     }
 
 
@@ -53,7 +70,7 @@ class DetectCycle {
  * }
  */
 
- 
+
 
 
 }

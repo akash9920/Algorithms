@@ -1,3 +1,17 @@
-// for string pattern matching we can use KMP algorithm or subString as well, just look for that;
+Notes:
+1) for string pattern matching we can use KMP algorithm or subString as well, just look for that;
 
 example is StrStr question
+
+2) to get the integer value from a char is can be done by 
+
+a) Character.getNumericValue(s.charAt(3))
+b) Integer.parseInt(String.valueOf(c)
+
+if you wanna just get the asci value then just print as integer and it will give the ascii value;
+
+
+// TODO:
+
+1) how to read the negative values from the string, ex : converting a negative number to a string and then how can we get it back
+
