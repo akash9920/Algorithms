@@ -1,0 +1,28 @@
+----- > console.log(), write  to browsers  console, log messeges to the console, good 
+                        for debugging
+
+
+-------> document.write(), write to the browsers current html document
+                           its a data model... anything done is immediately is immediately reflected
+                           this writes to the html file dynamically
+                        
+                        document.write("<ul>");
+                        for(var i in scores) {
+                            document.write("<li>"scores["+i+"]) = " + 
+                                                        scores[i]);
+                            document.write("</li>");
+                        }
+
+                        document.write("</ul>");
+                    similarly can create a dynamically create a table
+
+                    ------->>>but the above methos is error prone<< ---- this is just for demonstration
+
+Binding events
+like onClick,
+
+many of the time JS is mentioned in last so no initial loading should not take more time
+bt syntatxtcally it should be in the head
+
+
+
