@@ -1,0 +1,23 @@
+JAVA
+
+copy array Arrays.copyOf(a, a.length);
+
+looking for index
+in a list : rrays.asList(nums).indexOf(tempnums[i]);
+
+in an array : ArrayUtils.indexOf(a, target);
+
+Arrays.utils not working so go for  
+               arr[0]= Arrays.binarySearch(nums, tempnums[i]);
+                arr[1]= Arrays.binarySearch(nums, tempnums[j]);
+
+
+for loop is slower then while loop?
+
+covernting an integer into a char array and accessing eac value
+
+	char[] arr = Integer.toString(x).toCharArray();	
+
+		Integer.valueOf(String.valueOf(arr[i]));
+
+        
