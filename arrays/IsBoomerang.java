@@ -1,5 +1,10 @@
 class IsBoomerang{
 
+
+    /*
+    Leet code 1037. Valid Boomerang, simple question
+    */
+
     public static void main(String[] args){
 
         IsBoomerang s = new IsBoomerang();
