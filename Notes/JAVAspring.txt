@@ -10,3 +10,7 @@ install maven
 NOtes
 POM -> project object model, it describes your project dependencies
 
+when you do a mvn clean install
+it will instlall the dependencies and will reate a jar file in target folder
+
+some suggestions for 

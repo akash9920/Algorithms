@@ -1,0 +1,16 @@
+HTML
+
+for input fields and forms its better to include
+a label like
+
+<label for ="usernamefld"> Username </>
+<input id = "usernamefld">
+
+--> type
+--->title so that when you hover you wwill get to know some odea, the txt will appear according to that.
+placeholder />
+
+<input ---> we can also add some wdgets>
+
+
+for checkbox and radio buttons, you can wrap with label tag to incrrease the clickable area
