@@ -1,0 +1,20 @@
+CHAPTER 4 
+
+The single most important factor that distinguishes a well-designed component from a poorly designed one is the degree to which the component hides its internal data and other implementation details from other components. A well-designed component hides all its implementation details, cleanly separating its API from its implementation. 
+
+The rule of thumb is simple: make each class or member as inaccessible as possible.
+
+If a package-private top-level class or interface is used by only one class, consider making the top-level class a private static nested class of the sole class that uses it
+
+
+finale / immutable class return a new object # functional approach, in ch4 page 75
+
+# immutable objects are thread safe and do not require the keyword synchronize
+
+
+
+
+Notes:
+needs more clariy on the following things
+
+mutable vs immutable classes and their used cases.

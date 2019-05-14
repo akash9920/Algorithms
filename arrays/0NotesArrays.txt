@@ -1,3 +1,9 @@
+
+In isBoomaerang question, approach was fine from initial but I was missing the basic point of floating value, I was considering int values with give me converted value
+hence all the test cases were not passing so , this question taught me the basic of how to convert an in to float while division.
+
+
+
 TODO:
 
 Rotate array , inplace solution

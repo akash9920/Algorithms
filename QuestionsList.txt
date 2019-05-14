@@ -33,5 +33,5 @@ space-separated sequence of dictionary words.
 
 -----------------Notes---------------------
 
-1) Do read about the general ecurity issues :Determine
+1) Do read about the general Security issues :Determine
 

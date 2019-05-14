@@ -15,3 +15,9 @@ if you wanna just get the asci value then just print as integer and it will give
 
 1) how to read the negative values from the string, ex : converting a negative number to a string and then how can we get it back
 
+
+
+// Questions Mindboggling
+
+1) what could be the maximum size of a string?
+is there any restriction, if yes then what can be that restriction

@@ -2,6 +2,24 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - IsBoomerang",
+            "request": "launch",
+            "mainClass": "IsBoomerang"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "mainClass": "Solution"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - solution",
+            "request": "launch",
+            "mainClass": "solution"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - StrStr",
             "request": "launch",
             "mainClass": "StrStr"
