@@ -1,4 +1,25 @@
+
+Notes:
+
+this is in reference to the question 
+Using the ternary operator along with lambda:
+
+this is what I was tryong to do:
+
+return countZero + (return countTwo>CountFive? countTwo:countFiv; )
+
+not working, but 2nd thought was to use lambda like:
+
+return countZero + (return (x) - > x = countTwo>CountFive? countTwo:countFiv; )
+
+but in lambda we cannot assign value to x as it an argument which is fundamentaly wrong?
+(Though not sure about the argument)
+I was 
+(p) -> System.out.println("One parameter: " + p);
+
+
 TODO:
 
 Rotate array , inplace solution
  
+

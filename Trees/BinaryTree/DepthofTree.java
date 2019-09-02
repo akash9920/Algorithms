@@ -9,6 +9,7 @@ public class DepthofTree{
         
         int right = treeDepth(root.right);
 
+        // return left>right? left+1 : right+1;
         return Math.max(left, right) +1;
 
     }

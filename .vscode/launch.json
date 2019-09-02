@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MaximumSubArray",
+            "request": "launch",
+            "mainClass": "MaximumSubArray"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FindAllSubsets",
+            "request": "launch",
+            "mainClass": "FindAllSubsets"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NoOfIslands",
+            "request": "launch",
+            "mainClass": "NoOfIslands"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MaxProfitMultiple",
+            "request": "launch",
+            "mainClass": "MaxProfitMultiple"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TrailingZero",
+            "request": "launch",
+            "mainClass": "TrailingZero"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MaxSubArray",
+            "request": "launch",
+            "mainClass": "MaxSubArray"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MaxProfit",
+            "request": "launch",
+            "mainClass": "MaxProfit"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - StrStr",
             "request": "launch",
             "mainClass": "StrStr"
