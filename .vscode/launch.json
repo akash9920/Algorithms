@@ -2,6 +2,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "CodeLens (Launch) - MaximumSubArray",
             "request": "launch",
             "mainClass": "MaximumSubArray"
@@ -41,6 +42,23 @@
             "name": "CodeLens (Launch) - MaxProfit",
             "request": "launch",
             "mainClass": "MaxProfit"
+=======
+            "name": "CodeLens (Launch) - IsBoomerang",
+            "request": "launch",
+            "mainClass": "IsBoomerang"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "mainClass": "Solution"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - solution",
+            "request": "launch",
+            "mainClass": "solution"
+>>>>>>> f9db64cac75e698d0382cc66a96a3dbe1c66847b
         },
         {
             "type": "java",

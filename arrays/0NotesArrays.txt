@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 Notes:
 
 this is in reference to the question 
@@ -16,6 +17,11 @@ but in lambda we cannot assign value to x as it an argument which is fundamental
 (Though not sure about the argument)
 I was 
 (p) -> System.out.println("One parameter: " + p);
+=======
+In isBoomaerang question, approach was fine from initial but I was missing the basic point of floating value, I was considering int values with give me converted value
+hence all the test cases were not passing so , this question taught me the basic of how to convert an in to float while division.
+
+>>>>>>> f9db64cac75e698d0382cc66a96a3dbe1c66847b
 
 
 TODO:
