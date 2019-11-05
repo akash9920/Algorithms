@@ -2,47 +2,6 @@
     "configurations": [
         {
             "type": "java",
-<<<<<<< HEAD
-            "name": "CodeLens (Launch) - MaximumSubArray",
-            "request": "launch",
-            "mainClass": "MaximumSubArray"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - FindAllSubsets",
-            "request": "launch",
-            "mainClass": "FindAllSubsets"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - NoOfIslands",
-            "request": "launch",
-            "mainClass": "NoOfIslands"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - MaxProfitMultiple",
-            "request": "launch",
-            "mainClass": "MaxProfitMultiple"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - TrailingZero",
-            "request": "launch",
-            "mainClass": "TrailingZero"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - MaxSubArray",
-            "request": "launch",
-            "mainClass": "MaxSubArray"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - MaxProfit",
-            "request": "launch",
-            "mainClass": "MaxProfit"
-=======
             "name": "CodeLens (Launch) - IsBoomerang",
             "request": "launch",
             "mainClass": "IsBoomerang"
@@ -58,7 +17,6 @@
             "name": "CodeLens (Launch) - solution",
             "request": "launch",
             "mainClass": "solution"
->>>>>>> f9db64cac75e698d0382cc66a96a3dbe1c66847b
         },
         {
             "type": "java",

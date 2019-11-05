@@ -6,7 +6,7 @@ class MaximumSubArray {
 
         MaximumSubArray m = new MaximumSubArray();
 
-        m.maxSubArray(arr);
+        m.max2SubArray(arr);
     }
 
 
@@ -45,4 +45,16 @@ class MaximumSubArray {
     public int maxSubArray(int[] nums) {
       return helper(nums, 0, nums.length - 1);
     }
+
+    public int max2SubArray(int[] nums) {
+      int n = nums.length;
+      int currSum = nums[0], maxSum = nums[0];
+  
+      for(int i = 1; i < n; ++i) {
+        currSum = Math.max(nums[i], currSum + nums[i]);
+        maxSum = Math.max(maxSum, currSum);
+      }
+      return maxSum;
+    }
+
   }

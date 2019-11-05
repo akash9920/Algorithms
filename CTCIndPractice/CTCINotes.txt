@@ -1,0 +1,6 @@
+
+why dfs with recursion or to prefer BFS
+The advantage of the recursion solution is that it is easier to implement. However, 
+there is a huge disadvantage: if the depth of recursion is too high, you will suffer 
+from stack overflow. In that case, you might want to use BFS instead or implement DFS 
+using an explicit stack.

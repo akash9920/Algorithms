@@ -1,0 +1,30 @@
+// Initially I am just discussinng the functional interface and lambda usage 
+// so that use for the revision purpose
+
+Functional Interface uses and examples:
+
+Interface can be defined within the class itseld as well
+
+
+JAVA 8 features and Lambda xpression, Multi threaqding : 
+JAVA architecture  and how internally things work.
+
+functional interface: 
+predicate:
+consumer
+
+I need the list from the CSYE 6200 course, dekhe hai..
+
+what are the  places where it can be used CompareTo,  
+ java generic classes
+ 
+ JAVA streams, maps , filter
+ 
+p[redicate and cosnumers there defines the fileters  for the java appplications.. ?
+
+ListName.forEach(x-> some computation); where x is nothing but each element of the list
+
+arrL.forEach(n -> { if (n%2 == 0) System.out.println(n); }); 
+
+ 
+ 
