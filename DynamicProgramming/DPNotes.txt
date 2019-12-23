@@ -1,0 +1,8 @@
+when and how to see that a problem is a dynamic programming problem..
+
+1) so my task for tomorrow will be to identify, how to identify the problem...!!
+
+Start with the recursive backtracking solution
+Optimize by using a memoization table (top-down[2] dynamic programming)
+Remove the need for recursion (bottom-up dynamic programming)
+Apply final tricks to reduce the time / memory complexity
